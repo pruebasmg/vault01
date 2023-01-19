@@ -1,0 +1,17 @@
+apiVersion: external-secrets.io/v1beta1
+kind: ClusterSecretStore
+metadata:
+  name: vault-backend-global
+spec:
+  provider:
+    vault:
+      server: "http://192.168.0.5:8200"
+      path: secret
+      version: v2
+      auth:
+        # Puntero al Secreto Token para accesar a Vault
+        # https://www.vaultproject.io/docs/auth/token
+        tokenSecretRef:
+          name: "vault-token-global"
+          key: "token"
+          namespace: external-secrets

@@ -1,0 +1,1 @@
+pagina es: https://blog.santiagoagustinfernandez.com/secretos-de-kubernetes-con-hashicorp-vault-external-secrets-operator/ 
